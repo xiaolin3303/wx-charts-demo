@@ -1,0 +1,3 @@
+<view class="container">
+    <canvas canvas-id="ringCanvas" class="canvas"></canvas>
+</view>

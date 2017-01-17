@@ -1,0 +1,3 @@
+<view class="container">
+    <canvas canvas-id="pieCanvas" class="canvas"></canvas>
+</view>

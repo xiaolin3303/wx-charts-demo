@@ -1,0 +1,3 @@
+<view class="container">
+    <canvas canvas-id="lineCanvas" class="canvas"></canvas>
+</view>

@@ -1,0 +1,9 @@
+/**index.wxss**/
+.mt20 {
+    margin-top: 20rpx;
+}
+.list-item {
+    height: 60rpx;
+    line-height: 60rpx;
+    text-indent: 30rpx;
+}

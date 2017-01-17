@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+    <view bindtap="gotoPage" data-page="line" class="mt20 list-item">Line</view>
+    <view bindtap="gotoPage" data-page="column" class="list-item">Column</view>
+    <view bindtap="gotoPage" data-page="pie" class="list-item">Pie</view>
+    <view bindtap="gotoPage" data-page="ring" class="list-item">Ring</view>
+    <view bindtap="gotoPage" data-page="area" class="list-item">Area</view>
+</view>

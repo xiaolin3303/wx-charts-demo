@@ -1,0 +1,3 @@
+<view class="container">
+    <canvas canvas-id="areaCanvas" class="canvas"></canvas>
+</view>
