@@ -4,7 +4,7 @@ Page({
     data: {
     },
     onLoad: function (e) {
-        let windowWidth = 320;
+        var windowWidth = 320;
         try {
             var res = wx.getSystemInfoSync();
             windowWidth = res.windowWidth;

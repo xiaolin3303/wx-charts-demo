@@ -5,7 +5,7 @@ Page({
     },
 
     onReady: function (e) {
-        let windowWidth = 320;
+        var windowWidth = 320;
         try {
           var res = wx.getSystemInfoSync();
           windowWidth = res.windowWidth;
@@ -13,8 +13,8 @@ Page({
           console.error('getSystemInfoSync failed!');
         }
 
-        let categories = [];
-        let data = [];
+        var categories = [];
+        var data = [];
         for (var i = 0; i < 12; i++) {
             categories.push('2016-' + (i + 1));
             data.push(Math.random() * (20-10) + 10);
