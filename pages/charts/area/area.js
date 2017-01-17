@@ -45,8 +45,7 @@ Page({
                 gridColor: '#7cb5ec'
             },            
             width: windowWidth,
-            height: 300,
-            dataPointShape: false
+            height: 200
         });
     }
 });

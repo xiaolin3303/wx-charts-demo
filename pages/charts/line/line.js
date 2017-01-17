@@ -43,7 +43,7 @@ Page({
                 min: 0
             },
             width: windowWidth,
-            height: 300,
+            height: 200,
             dataLabel: false,
             dataPointShape: false
         });

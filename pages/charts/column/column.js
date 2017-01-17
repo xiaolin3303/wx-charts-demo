@@ -47,7 +47,7 @@ Page({
                 disableGrid: true
             },
             width: windowWidth,
-            height: 300,
+            height: 200,
         });
     }
 });

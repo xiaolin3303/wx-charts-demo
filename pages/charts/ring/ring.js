@@ -19,12 +19,12 @@ Page({
             title: {
                 name: '70%',
                 color: '#7cb5ec',
-                fontSize: 40
+                fontSize: 25
             },
             subtitle: {
                 name: '收益率',
                 color: '#666666',
-                fontSize: 20
+                fontSize: 15
             },
             series: [{
                 name: '成交量1',
@@ -44,7 +44,7 @@ Page({
                  stroke: false
             }],
             width: windowWidth,
-            height: 300,
+            height: 200,
             dataLabel: false,
             legend: false,
             padding: 0
