@@ -12,20 +12,14 @@ Page({
           console.error('getSystemInfoSync failed!');
         }
         
-        var categories = [];
-        var data = [];
-        for (var i = 0; i < 6; i++) {
-            categories.push('2016-' + (i + 1));
-            data.push(Math.random()*(20-10)+10);
-        }
         new wxCharts({
             canvasId: 'areaCanvas',
             type: 'area',
-            categories: categories,
+            categories: ['1', '2', '3', '4', '5', '6'],
             animation: true,
             series: [{
                 name: '成交量1',
-                data: data,
+                data: [32, 45, null, 56, 33, 34],
                 format: function (val) {
                     return val.toFixed(2) + '万';
                 }

@@ -13,12 +13,6 @@ Page({
           console.error('getSystemInfoSync failed!');
         }
 
-        var categories = [];
-        var data = [];
-        for (var i = 0; i < 12; i++) {
-            categories.push('2016-' + (i + 1));
-            data.push(Math.random() * (20-10) + 10);
-        }
         new wxCharts({
             canvasId: 'columnCanvas',
             type: 'column',
@@ -44,7 +38,8 @@ Page({
                 title: 'hello'
             },
             xAxis: {
-                disableGrid: true
+                disableGrid: false,
+                type: 'calibration'
             },
             width: windowWidth,
             height: 200,
