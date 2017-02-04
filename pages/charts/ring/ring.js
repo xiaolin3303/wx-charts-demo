@@ -43,6 +43,7 @@ Page({
                 data: 63,
                  stroke: false
             }],
+            disablePieStroke: true,
             width: windowWidth,
             height: 200,
             dataLabel: false,
