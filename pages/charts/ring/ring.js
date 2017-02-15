@@ -16,6 +16,9 @@ Page({
             animation: true,
             canvasId: 'ringCanvas',
             type: 'ring',
+            extra: {
+                ringWidth: 25
+            },
             title: {
                 name: '70%',
                 color: '#7cb5ec',
