@@ -1,5 +1,6 @@
 var wxCharts = require('../../../utils/wxcharts.js');
 var app = getApp();
+var ringChart = null;
 Page({
     data: {
     },
@@ -12,7 +13,7 @@ Page({
             console.error('getSystemInfoSync failed!');
         }
 
-        new wxCharts({
+        ringChart = new wxCharts({
             animation: true,
             canvasId: 'ringCanvas',
             type: 'ring',
@@ -53,5 +54,11 @@ Page({
             legend: false,
             padding: 0
         });
+        ringChart.addEventListener('renderComplete', () => {
+            console.log('renderComplete');
+        });
+        setTimeout(() => {
+            ringChart.stopAnimation();
+        }, 500);
     }
 });

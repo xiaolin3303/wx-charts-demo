@@ -1,7 +1,35 @@
 var wxCharts = require('../../../utils/wxcharts.js');
 var app = getApp();
+var lineChart = null;
 Page({
     data: {
+    },
+    createSimulationData: function () {
+        var categories = [];
+        var data = [];
+        for (var i = 0; i < 50; i++) {
+            categories.push('2016-' + (i + 1));
+            data.push(Math.random()*(20-10)+10);
+        }
+
+        return {
+            categories: categories,
+            data: data
+        }
+    },
+    updateData: function () {
+        var simulationData = this.createSimulationData();
+        var series = [{
+            name: '成交量1',
+            data: simulationData.data,
+            format: function (val, name) {
+                return val.toFixed(2) + '万';
+            }
+        }];
+        lineChart.updateData({
+            categories: simulationData.categories,
+            series: series
+        });
     },
     onLoad: function (e) {
         var windowWidth = 320;
@@ -12,22 +40,16 @@ Page({
             console.error('getSystemInfoSync failed!');
         }
         
-        var categories = [];
-        var data = [];
-        for (var i = 0; i < 50; i++) {
-            categories.push('2016-' + (i + 1));
-            data.push(Math.random()*(20-10)+10);
-        }
-
-        new wxCharts({
+        var simulationData = this.createSimulationData();
+        lineChart = new wxCharts({
             canvasId: 'lineCanvas',
             type: 'line',
-            categories: categories,
+            categories: simulationData.categories,
             animation: false,
             background: '#f5f5f5',
             series: [{
                 name: '成交量1',
-                data: data,
+                data: simulationData.data,
                 format: function (val, name) {
                     return val.toFixed(2) + '万';
                 }

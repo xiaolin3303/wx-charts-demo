@@ -1,10 +1,10 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/charts/column/column",
     "pages/charts/ring/ring",
-    "pages/charts/pie/pie",
     "pages/charts/line/line",
+    "pages/charts/column/column",
+    "pages/charts/pie/pie",
     "pages/charts/area/area"
   ],
   "window":{

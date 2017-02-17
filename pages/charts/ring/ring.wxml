@@ -1,3 +1,4 @@
 <view class="container">
     <canvas canvas-id="ringCanvas" class="canvas"></canvas>
+    <view>调用stopAnimation终止动画，并监听渲染完成事件</view>
 </view>
