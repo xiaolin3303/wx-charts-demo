@@ -4,6 +4,9 @@ var lineChart = null;
 Page({
     data: {
     },
+    touchHandler: function (e) {
+        console.log(lineChart.getCurrentDataIndex(e));
+    },    
     createSimulationData: function () {
         var categories = [];
         var data = [];

@@ -1,8 +1,12 @@
 var wxCharts = require('../../../utils/wxcharts.js');
 var app = getApp();
+var pieChart = null;
 Page({
     data: {
     },
+    touchHandler: function (e) {
+        console.log(pieChart.getCurrentDataIndex(e));
+    },        
     onLoad: function (e) {
         var windowWidth = 320;
         try {
@@ -12,7 +16,7 @@ Page({
             console.error('getSystemInfoSync failed!');
         }
 
-        new wxCharts({
+        pieChart = new wxCharts({
             animation: true,
             canvasId: 'pieCanvas',
             type: 'pie',

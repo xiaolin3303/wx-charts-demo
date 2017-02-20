@@ -1,3 +1,8 @@
 <view class="container">
-    <canvas canvas-id="columnCanvas" class="canvas"></canvas>
+	<view class="title">
+		<view wx:if="{{!isMainChartDisplay}}" class="back-btn" bindtap="backToMainChart">返回</view>
+		{{chartTitle}}
+	</view>
+    <canvas canvas-id="columnCanvas" class="canvas" bindtouchstart="touchHandler"></canvas>
+    <view style="text-align:center">点击数据每一项查看详情</view>
 </view>

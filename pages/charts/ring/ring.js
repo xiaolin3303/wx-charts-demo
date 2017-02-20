@@ -4,6 +4,9 @@ var ringChart = null;
 Page({
     data: {
     },
+    touchHandler: function (e) {
+        console.log(ringChart.getCurrentDataIndex(e));
+    },        
     onReady: function (e) {
         var windowWidth = 320;
         try {

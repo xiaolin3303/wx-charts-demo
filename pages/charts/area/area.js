@@ -1,8 +1,12 @@
 var wxCharts = require('../../../utils/wxcharts.js');
 var app = getApp();
+var areaChart = null;
 Page({
     data: {
     },
+    touchHandler: function (e) {
+        console.log(areaChart.getCurrentDataIndex(e));
+    },    
     onLoad: function (e) {
         var windowWidth = 320;
         try {
@@ -12,7 +16,7 @@ Page({
           console.error('getSystemInfoSync failed!');
         }
         
-        new wxCharts({
+        areaChart = new wxCharts({
             canvasId: 'areaCanvas',
             type: 'area',
             categories: ['1', '2', '3', '4', '5', '6'],

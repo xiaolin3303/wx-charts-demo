@@ -1,11 +1,11 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/charts/ring/ring",
-    "pages/charts/line/line",
     "pages/charts/column/column",
     "pages/charts/pie/pie",
-    "pages/charts/area/area"
+    "pages/charts/ring/ring",
+    "pages/charts/area/area",
+    "pages/charts/line/line"
   ],
   "window":{
     "backgroundTextStyle":"light",
