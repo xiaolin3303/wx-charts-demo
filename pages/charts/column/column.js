@@ -3,7 +3,7 @@ var app = getApp();
 var columnChart = null;
 var chartData = {
     main: {
-        title: '总成交量成交量',
+        title: '总成交量',
         data: [15, 20, 45, 37],
         categories: ['2012', '2013', '2014', '2015']
     },
