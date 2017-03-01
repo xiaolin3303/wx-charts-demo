@@ -6,7 +6,17 @@ Page({
     },
     touchHandler: function (e) {
         console.log(ringChart.getCurrentDataIndex(e));
-    },        
+    },
+    updateData: function () {
+        ringChart.updateData({
+            title: {
+                name: '80%'
+            },
+            subtitle: {
+                color: '#ff0000'
+            }
+        });
+    },     
     onReady: function (e) {
         var windowWidth = 320;
         try {
