@@ -10,7 +10,7 @@ Page({
     createSimulationData: function () {
         var categories = [];
         var data = [];
-        for (var i = 0; i < 50; i++) {
+        for (var i = 0; i < 10; i++) {
             categories.push('2016-' + (i + 1));
             data.push(Math.random()*(20-10)+10);
         }
@@ -70,7 +70,10 @@ Page({
             width: windowWidth,
             height: 200,
             dataLabel: false,
-            dataPointShape: false
+            dataPointShape: true,
+            extra: {
+                lineStyle: 'curve'
+            }
         });
     }
 });
