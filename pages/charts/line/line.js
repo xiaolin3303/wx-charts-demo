@@ -6,6 +6,9 @@ Page({
     },
     touchHandler: function (e) {
         console.log(lineChart.getCurrentDataIndex(e));
+        lineChart.showToolTip(e, {
+            // background: '#7cb5ec'
+        });
     },    
     createSimulationData: function () {
         var categories = [];
@@ -14,7 +17,7 @@ Page({
             categories.push('2016-' + (i + 1));
             data.push(Math.random()*(20-10)+10);
         }
-
+        // data[4] = null;
         return {
             categories: categories,
             data: data
@@ -48,11 +51,17 @@ Page({
             canvasId: 'lineCanvas',
             type: 'line',
             categories: simulationData.categories,
-            animation: false,
+            animation: true,
             background: '#f5f5f5',
             series: [{
                 name: '成交量1',
                 data: simulationData.data,
+                format: function (val, name) {
+                    return val.toFixed(2) + '万';
+                }
+            }, {
+                name: '成交量2',
+                data: [11, 24, 29, 15, null, 21, 32, 23, 45, 21],
                 format: function (val, name) {
                     return val.toFixed(2) + '万';
                 }

@@ -6,6 +6,7 @@ Page({
     },
     touchHandler: function (e) {
         console.log(areaChart.getCurrentDataIndex(e));
+        areaChart.showToolTip(e);
     },    
     onLoad: function (e) {
         var windowWidth = 320;
