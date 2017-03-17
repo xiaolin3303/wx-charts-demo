@@ -5,4 +5,5 @@
     <view bindtap="gotoPage" data-page="pie" class="list-item">Pie</view>
     <view bindtap="gotoPage" data-page="ring" class="list-item">Ring</view>
     <view bindtap="gotoPage" data-page="area" class="list-item">Area</view>
+    <view bindtap="gotoPage" data-page="radar" class="list-item">Radar</view>
 </view>

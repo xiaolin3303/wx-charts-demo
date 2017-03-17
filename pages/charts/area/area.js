@@ -42,7 +42,10 @@ Page({
             xAxis: {
                 fontColor: '#7cb5ec',
                 gridColor: '#7cb5ec'
-            },            
+            },
+            extra: {
+                legendTextColor: '#cb2431'
+            },
             width: windowWidth,
             height: 200
         });

@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/charts/radar/radar",
     "pages/charts/line/line",
     "pages/charts/column/column",
     "pages/charts/pie/pie",
