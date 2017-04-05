@@ -98,6 +98,11 @@ Page({
                 disableGrid: false,
                 type: 'calibration'
             },
+            extra: {
+                column: {
+                    width: 15
+                }
+            },
             width: windowWidth,
             height: 200,
         });
