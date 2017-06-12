@@ -31,7 +31,10 @@ Page({
             canvasId: 'ringCanvas',
             type: 'ring',
             extra: {
-                ringWidth: 25
+                ringWidth: 25,
+                pie: {
+                    offsetAngle: -45
+                }
             },
             title: {
                 name: '70%',
