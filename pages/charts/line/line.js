@@ -61,7 +61,7 @@ Page({
                 }
             }, {
                 name: '成交量2',
-                data: [11, 24, 29, 15, null, 21, 32, 23, 45, 21],
+                data: [2, 0, 0, 3, null, 4, 0, 0, 2, 0],
                 format: function (val, name) {
                     return val.toFixed(2) + '万';
                 }
