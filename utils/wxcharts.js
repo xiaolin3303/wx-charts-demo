@@ -342,10 +342,12 @@ function getRadarCoordinateSeries(length) {
     });
 }
 
-function getToolTipData(seriesData, calPoints, index) {
+function getToolTipData(seriesData, calPoints, index, categories) {
+    var option = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : {};
+
     var textList = seriesData.map(function (item) {
         return {
-            text: item.name + ': ' + item.data,
+            text: option.format ? option.format(item, categories[index]) : item.name + ': ' + item.data,
             color: item.color
         };
     });
@@ -1478,7 +1480,18 @@ function drawPieDataPoints(series, opts, config, context) {
     }
 
     if (opts.dataLabel !== false && process === 1) {
-        drawPieText(series, opts, config, context, radius, centerPosition);
+        // fix https://github.com/xiaolin3303/wx-charts/issues/132
+        var valid = false;
+        for (var i = 0, len = series.length; i < len; i++) {
+            if (series[i].data > 0) {
+                valid = true;
+                break;
+            }
+        }
+
+        if (valid) {
+            drawPieText(series, opts, config, context, radius, centerPosition);
+        }
     }
 
     if (process === 1 && opts.type === 'ring') {
@@ -1884,7 +1897,7 @@ Charts.prototype.showToolTip = function (e) {
             if (seriesData.length === 0) {
                 drawCharts.call(this, opts.type, opts, this.config, this.context);
             } else {
-                var _getToolTipData = getToolTipData(seriesData, this.chartData.calPoints, index),
+                var _getToolTipData = getToolTipData(seriesData, this.chartData.calPoints, index, this.opts.categories, option),
                     textList = _getToolTipData.textList,
                     offset = _getToolTipData.offset;
 

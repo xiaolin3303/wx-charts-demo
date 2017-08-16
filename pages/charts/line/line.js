@@ -7,7 +7,10 @@ Page({
     touchHandler: function (e) {
         console.log(lineChart.getCurrentDataIndex(e));
         lineChart.showToolTip(e, {
-            // background: '#7cb5ec'
+            // background: '#7cb5ec',
+            format: function (item, category) {
+                return category + ' ' + item.name + ':' + item.data 
+            }
         });
     },    
     createSimulationData: function () {
