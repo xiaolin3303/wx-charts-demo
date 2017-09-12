@@ -1,0 +1,4 @@
+<view class="container">
+    <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler" bindtouchmove="moveHandler" bindtouchend="touchEndHandler"></canvas>
+    <view style="margin-top:30px;text-align:center">拖动图表查看</view>
+</view>

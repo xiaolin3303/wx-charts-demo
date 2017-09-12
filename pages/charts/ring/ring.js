@@ -68,6 +68,7 @@ Page({
             height: 200,
             dataLabel: false,
             legend: false,
+            background: '#f5f5f5',
             padding: 0
         });
         ringChart.addEventListener('renderComplete', () => {
