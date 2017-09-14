@@ -55,7 +55,7 @@ Page({
             type: 'line',
             categories: simulationData.categories,
             animation: true,
-            background: '#f5f5f5',
+            // background: '#f5f5f5',
             series: [{
                 name: '成交量1',
                 data: simulationData.data,
